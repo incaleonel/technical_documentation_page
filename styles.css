@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    display:grid;
+    grid-template-areas: "navbar text";
+    grid-template-columns: 20em auto;
+    font-family: 'Open Sans', Arial, sans-serif;;
+}
+
+#navbar{
+    grid-area: navbar;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 20em;
+    height: 100vh;   
+    position:fixed;
+}
+.nav-link{
+    border-style: solid;
+    border-bottom: black;
+    border-width: 1px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em;
+}
+.nav-link:hover{
+    border-width: 3px;
+}
+#navbar header{
+    font-size: 1.7em;
+    padding: 0.8em;
+    height: 5vh;
+    text-align: center;
+}
+#main-doc{
+    grid-area: text;
+    height: 100%;
+    padding: 2em;
+}
+#menu{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    margin:0;
+    height: 85%;
+    overflow-y: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    
+}
+
+p{
+    margin: 1em;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+section ul li{
+    margin:1em;
+}
+
+header{
+    padding-top: 1.2em;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+code{
+    background-color: #EEE;
+    padding: 1em 1em;
+    margin: 1em 2.5em;
+    white-space: pre-line;
+    display: block;
+    line-height: 2;
+}
+
+@media (max-width: 700px){
+    body{
+        grid-template-areas: "navbar navbar"
+                             "text text";
+    }
+    #navbar{
+        position:static;
+        width: 100%;
+        height: auto;
+    }
+    #menu{
+        height: 40vh;
+    }
+}
